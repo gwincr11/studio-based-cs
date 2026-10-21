@@ -1,0 +1,55 @@
+name: Flask starter
+
+on:
+  push:
+    paths: ["starter/**", ".github/workflows/starter.yml", ".devcontainer/**"]
+  pull_request:
+    paths: ["starter/**", ".github/workflows/starter.yml", ".devcontainer/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: starter
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: studio_app
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/studio_app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: |
+            starter/package-lock.json
+            starter/frontend/package-lock.json
+      - run: script/bootstrap
+      - run: script/lint
+      - run: script/typecheck
+      - run: script/test
+      - name: Check PostgreSQL migrations
+        run: |
+          .venv/bin/flask --app src.app:create_app db upgrade
+          .venv/bin/flask --app src.app:create_app db check
+      - run: npm exec -- playwright install --with-deps chromium
+      - run: script/test-e2e

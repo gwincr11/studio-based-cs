@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Studio Starter{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/main.css') }}">
+    <script type="module" src="{{ url_for('static', filename='assets/main.js') }}"></script>
+</head>
+<body class="min-h-screen bg-stone-50">
+    {% block content %}{% endblock %}
+</body>
+</html>

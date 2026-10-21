@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eee9de" />
+  <meta name="description" content="A proposed software engineering studio class with AI, followed by a hands-on studio and guest discussions." />
+  <title>Teaching Software Engineering in a Studio Class with AI</title>
+</head>
+
+<body>
+  <header class="deck-header">
+    <a class="wordmark" href="#/0" aria-label="Software Engineering Studio, first slide"><span class="brand-mark" aria-hidden="true"></span> Software Engineering <span class="wordmark-divider">/</span> Studio</a>
+  </header>
+
+  <main class="reveal" aria-label="Teaching software engineering in a studio class with AI">
+    <div class="slides">
+      <section class="cover" id="belonging" data-title="Teaching Software Engineering in a Studio Class with AI">
+        <div class="cover-copy">
+          <p class="eyebrow"><span class="small-rule"></span> A CLASS IDEA + A SHARED STUDIO</p>
+          <h1>Teaching Software Engineering<br />in a Studio Class<br /><em>with AI</em></h1>
+          <p class="intro">A project-based class for anyone who wants to build software.</p>
+          <div class="cover-bottom"><span class="chapter-label">THE CLASS → THE STUDIO → EXPERIENCES FROM PRACTICE</span><button class="begin-button" id="begin" disabled>Enter the studio <span aria-hidden="true">↗</span></button></div>
+        </div>
+        <aside class="notes">Introduce the proposed class, then distinguish explaining the course from the hands-on studio we will run together today. The visual theme borrows from architecture; the teaching proposal is the subject.</aside>
+      </section>
+
+      <section id="today" data-title="What Today Is">
+        <div class="section-heading">
+          <p class="eyebrow">THE CLASS IDEA</p><span class="margin-note">TODAY'S AGENDA</span>
+        </div>
+        <h2>What <em>today is</em></h2>
+        <div class="agenda">
+          <article>
+            <h3>Introduce the Class</h3>
+            <p>Introduce a Software Engineering Studio with AI.</p>
+          </article>
+          <article>
+            <h3>An AI Build</h3>
+            <p>You will build something using AI.</p>
+          </article>
+          <article>
+            <h3>A Mini Studio</h3>
+            <p>Run a studio together so you can see and feel it.</p>
+          </article>
+          <article>
+            <h3>Geoffrey Challen</h3>
+            <p>Running a real version of a similar class.</p>
+          </article>
+          <article>
+            <h3>Mike Swift</h3>
+            <p>Hackathons as a learning environment.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>TWO DISTINCT PARTS</span>
+          <p>First, explain the class. Then, experience a studio together.</p>
+        </div>
+        <aside class="notes">Explain the class proposal in the order of the outline. The hands-on activity comes after that explanation, with an explicit transition. Geoffrey and Swift follow the shared studio. Confirm participant AI-tool access and a working starter before presenting.</aside>
+      </section>
+
+      <section id="site" data-title="What Is a Software Engineering Studio?">
+        <div class="section-heading">
+          <p class="eyebrow">THE CLASS IDEA</p><span class="margin-note">WHAT IS THE CLASS?</span>
+        </div>
+        <h2>What is a Software<br /><em>Engineering Studio?</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Project-Based Learning</h3>
+            <p>Students build projects that solve real-world problems.</p>
+          </article>
+          <article>
+            <h3>Borrowing from Other Studio Models</h3>
+            <p>Art and architecture provide the model for making, feedback, and revision.</p>
+          </article>
+          <article>
+            <h3>Projects Evolve</h3>
+            <p>Students use AI and develop their projects over the course of the class.</p>
+          </article>
+        </div>
+        <aside class="notes">Define the class before explaining why we should teach it. This is more than a project assignment: work develops through recurring critique, stakeholder contact, and revision.</aside>
+      </section>
+
+      <section id="why-engineering" data-title="Why Software Engineering?">
+        <div class="section-heading">
+          <p class="eyebrow">THE CLASS IDEA</p><span class="margin-note">WHY SOFTWARE ENGINEERING?</span>
+        </div>
+        <h2>Why <em>Software Engineering?</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>AI Changes the Baseline</h3>
+            <p>AI is commoditizing many standard coding tasks. What should we teach beyond implementation?</p>
+          </article>
+          <article class="fragment" data-fragment-index="0">
+            <h3>Build for the “Youser”</h3>
+            <p>Simple engineering lets more people build useful applications for themselves and small groups.</p>
+          </article>
+          <article class="fragment" data-fragment-index="1">
+            <h3>Teach Engineering Judgment</h3>
+            <p>Focus on the problem, process, system qualities, and building materials.</p>
+          </article>
+        </div>
+        <aside class="notes">Present commoditization as the motivating premise about implementation tasks, not a claim that all of computer science is obsolete. The youser is the person building for their own needs or a small community. This opens a useful entry point into software engineering without beginning with programming.</aside>
+      </section>
+
+      <section id="why-studio" data-title="Why a Studio?">
+        <div class="section-heading">
+          <p class="eyebrow">THE CLASS IDEA</p><span class="margin-note">ART + ARCHITECTURE AS THE MODEL</span>
+        </div>
+        <h2>Why <em>a studio?</em></h2>
+        <div class="comparison">
+          <article><span class="label">Judgment Matters When AI Writes Code</span>
+            <h3>Writing Software Is Secondary Now</h3>
+            <p>Students focus on quality, materials, and problem–solution fit—not just producing code.</p>
+          </article>
+          <article class="accent-panel"><span class="label">Learning To Think</span>
+            <h3>Socratic Not Didactic; Build. Discuss. Revise.</h3>
+            <p>Feedback, participation, and shared work encourage students to think for themselves, learn from each other, work in groups and reflect on their own learning.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>WHY THIS ENVIRONMENT</span>
+          <p>Project-based learning and constructive social pressure encourage engagement and accountability.</p>
+        </div>
+        <aside class="notes">The art or architecture studio is the guiding teaching model. AI is a capable builder, but its work still needs direction and evaluation. Studios offer a model for engagement through shared projects and critique; avoid asserting measured outcomes for this proposed class. Social pressure should mean supportive accountability, not embarrassment.</aside>
+      </section>
+
+      <section id="ownership" data-title="What About AI?">
+        <div class="section-heading">
+          <p class="eyebrow">THE CLASS IDEA</p><span class="margin-note">OPEN TO ANYONE WHO WANTS TO BUILD</span>
+        </div>
+        <h2>What <em>About AI?</em></h2>
+        <div class="ownership-grid">
+          <article class="material-block"><span class="label">THE COURSE CONSTRAINT</span>
+            <h3>Students do not write code.</h3>
+            <p>AI creates all software. Students direct the work, evaluate the product, make judgements and develop taste and reasoning capacity.</p>
+          </article>
+          <article><span class="label">Teaching With AI / By Using AI Truly a Meta Experience</span>
+            <div class="responsibility-list"><span>AI Teaching Tools</span><span>Student Built AI Tooling</span><span>Tutor Agent</span><span>Harness Engineering</span><span>AI Driven Quizes</span><span>Spec Driven Development</span><span>AI Student Specific Assessment and Lessons</span><span>Validation of AI's Work</span></div>
+          </article>
+        </div>
+        <div class="slide-note"><span>NO CS PREREQUISITE</span>
+          <p>Non-CS students should be empowered to use advanced tools via AI and application creation; CS students learn valuable skills beyond coding.</p>
+        </div>
+        <aside class="notes">AI is involved throughout the course, both as a teaching tool and as something students learn to work with effectively. Different agent roles can be available at different times. Students do not hand-write software, but they must understand behavior, question choices, inspect evidence, and explain the result.</aside>
+      </section>
+
+      <section id="learning-evidence" data-title="What About AI? Student Prompts">
+        <div class="section-heading">
+          <p class="eyebrow">THE CLASS IDEA</p><span class="margin-note">AI USE + EVIDENCE OF LEARNING</span>
+        </div>
+        <h2>Follow AI Usage Via<br /><em>Student Prompts</em></h2>
+        <div class="evidence-flow">
+          <article><span class="label">LOG PROMPTS</span>
+            <p>See how students are working with AI.</p>
+          </article>
+          <article><span class="label">EXAMINE QUESTIONS</span>
+            <p>What do they ask, challenge, and investigate?</p>
+          </article>
+          <article><span class="label">CONNECT TO WORK</span>
+            <p>Compare prompts with decisions and revisions.</p>
+          </article>
+          <article><span class="label">LEARN FROM PRACTICE</span>
+            <p>Geoffrey will discuss his experience.</p>
+          </article>
+        </div>
+        <div class="privacy-note"><span class="label">BEFORE COLLECTING STUDENT DATA</span>
+          <p>Define purpose, access, consent, retention, and handling of sensitive data.</p>
+        </div>
+        <aside class="notes">The proposal includes logging all student prompts to understand how students work with AI, subject to institutional requirements and an explicit data policy. Do not put secrets or personal stakeholder data into prompts. Logs are one source of learning evidence, not a complete measure of understanding. Geoffrey will discuss his experience; do not invent findings. This deck does not collect prompts.</aside>
+      </section>
+
+      <section id="course-arc" data-title="The Course Arc">
+        <div class="section-heading">
+          <p class="eyebrow">THE COURSE ARC</p><span class="margin-note">LEARN IT + PRACTICE IT</span>
+        </div>
+        <h2>The <em>Course Arc</em></h2>
+        <table class="course-arc-table" aria-label="Teaching topics and corresponding studio activities">
+          <thead>
+            <tr><th scope="col">What is being taught</th><th scope="col">Studio component</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Building with AI</td><td>Build a small website.</td></tr>
+            <tr><td>Agentic harnesses</td><td>Introduce the problems students will work on.</td></tr>
+            <tr><td>Design thinking intro</td><td>Learn the process through a small in-class workshop.</td></tr>
+            <tr><td>Understanding problems</td><td>Teams interview stakeholders.</td></tr>
+            <tr><td>Ideation techniques</td><td>Teams ideate in the problem space.</td></tr>
+            <tr><td>Prototyping</td><td>Teams build prototypes.</td></tr>
+            <tr><td>Validation</td><td>First studio: teams share work with stakeholders and class.</td></tr>
+            <tr><td>Iteration introduced</td><td>Teams iterate on feedback.</td></tr>
+            <tr><td>Software engineering materials</td><td>Teams choose a final approach.</td></tr>
+            <tr><td>Quality attributes introduced</td><td>Teams gather quality attributes for their product.</td></tr>
+            <tr><td>Attribute-driven design</td><td>Students choose materials based on attributes.</td></tr>
+            <tr><td>Getting to production</td><td>Students build a real application and ship.</td></tr>
+          </tbody>
+        </table>
+        <aside class="notes">Read each row as a pairing: what is taught and how students apply it in the studio. Begin with a small website, introduce the project problems alongside agentic harnesses, and practice design thinking in a small in-class workshop. Teams then interview stakeholders, ideate, prototype, and share work in the first studio for validation. Feedback drives iteration before teams choose a final approach, gather quality attributes, select materials based on those attributes, and build and ship a real application. This is a sequence of learning, not a fixed weekly schedule.</aside>
+      </section>
+
+      <section id="first-build" data-title="Get Students Building with AI">
+        <div class="section-heading">
+          <p class="eyebrow">THE COURSE ARC</p><span class="margin-note">START WITH A SMALL SUCCESS</span>
+        </div>
+        <h2>Get Students<br /><em>Building with AI</em></h2>
+        <div class="two-column">
+          <div>
+            <p class="section-intro">Give students a starter project.<br />A personal website is a good first build.</p>
+            <div class="terminal-study"><span class="label">CLI INTRODUCTION — IT CAN FEEL SCARY</span>
+              <p>Ask → build → inspect → fix → deploy</p><span>Make the unfamiliar approachable.</span>
+            </div>
+          </div>
+          <div class="stack-list">
+            <article>
+              <div>
+                <h3>Introduce the tools</h3>
+                <p>The CLI, GitHub, and a prepared starting point.</p>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Harness engineering</h3>
+                <p>Agent instructions, tests, linters, and CI.</p>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Ship and fix</h3>
+                <p>Deploy to production and fix problems with AI.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside class="notes">Start with supported success rather than a long tools lecture. Explain harness engineering as the instructions, environment, checks, and feedback that help an agent produce useful work. The first deployment can be simple; production engineering becomes deeper later in the course.</aside>
+      </section>
+
+      <section id="problem-introductions" data-title="Problem Introductions">
+        <div class="section-heading">
+          <p class="eyebrow">THE COURSE ARC</p><span class="margin-note">CREATE TEAMS AROUND REAL NEEDS</span>
+        </div>
+        <h2>Problem <em>Introductions</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Prepared problem spaces</h3>
+            <p>Student clubs, a radio station, community partners, or an invented practice brief.</p>
+          </article>
+          <article>
+            <h3>Student-defined needs</h3>
+            <p>Family needs, dorm needs, or another problem students bring themselves.</p>
+          </article>
+          <article>
+            <h3>A reachable stakeholder</h3>
+            <p>Teams should communicate with someone who experiences the problem.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>ENOUGH DEPTH TO KEEP LEARNING</span>
+          <p>AI can solve small problems quickly. Choose problems with room to evolve.</p>
+        </div>
+        <aside class="notes">Create teams and introduce a set of problem spaces. Prefer real partners where possible; invented briefs are useful for practice but do not replace real stakeholder validation. Allow student-proposed projects when there is enough depth and someone they can talk to.</aside>
+      </section>
+
+      <section id="design-loop" data-title="Design Thinking">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">A BIG TOPIC, TAUGHT THROUGH TECHNIQUES</span>
+        </div>
+        <h2>Design <em>Thinking</em></h2>
+        <div class="design-loop">
+          <article>
+            <h3>Understand</h3>
+            <p>The problem and people.</p>
+          </article>
+          <article>
+            <h3>Ideate</h3>
+            <p>Explore alternatives.</p>
+          </article>
+          <article>
+            <h3>Prototype</h3>
+            <p>Make ideas tangible.</p>
+          </article>
+          <article>
+            <h3>Validate</h3>
+            <p>Review with people.</p>
+          </article>
+          <article>
+            <h3>Iterate</h3>
+            <p>Apply what you learn.</p>
+          </article>
+        </div>
+        <div class="return-line"><span aria-hidden="true">↶</span> REVISIT EARLIER STEPS AS YOU LEARN</div>
+        <div class="slide-note"><span>THEN PRODUCTIONIZE</span>
+          <p>Turn a validated direction into software people can depend on.</p>
+        </div>
+        <aside class="notes">Introduce the process before its individual techniques. Design thinking is a large topic, but students can begin quickly with practical methods. It is not a one-way waterfall. Productionization follows a promising direction and adds engineering responsibilities.</aside>
+      </section>
+
+      <section id="understand" data-title="Understand the Problem">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">UNDERSTAND BEFORE PROPOSING A SOLUTION</span>
+        </div>
+        <h2>Understand <em>the Problem</em></h2>
+        <div class="stack-list method-list">
+          <article>
+            <div>
+              <h3>Stakeholder interviews</h3>
+              <p>Ask about the last real occurrence, not whether someone likes your app idea.</p>
+            </div>
+          </article>
+          <article>
+            <div>
+              <h3>Workflow mapping + observation</h3>
+              <p>Map the current steps. Use fly-on-the-wall observation to see what people actually do.</p>
+            </div>
+          </article>
+          <article>
+            <div>
+              <h3>Rose, Bud, Thorn + affinity mapping</h3>
+              <p>Capture positives, possibilities, and pain points; group observations into patterns.</p>
+            </div>
+          </article>
+        </div>
+        <aside class="notes">Use a student-club event as an example: how does the organizer fill volunteer shifts today? Interviews reveal experiences, workflow maps reveal handoffs, and observation can expose unmentioned friction. Rose, Bud, Thorn and affinity mapping help teams organize what they learn. This slide explains course techniques; the shared studio comes later.</aside>
+      </section>
+
+      <section id="ideation" data-title="Ideation">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">EXPLORE MORE THAN ONE SOLUTION</span>
+        </div>
+        <h2><em>Ideation</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Creative matrix</h3>
+            <p>Cross user situations with different kinds of solutions to generate possibilities.</p>
+          </article>
+          <article>
+            <h3>Alternative universe</h3>
+            <p>Change an assumption: what if we could not create a new app?</p>
+          </article>
+          <article>
+            <h3>Sketching</h3>
+            <p>Draw several approaches before committing to an implementation.</p>
+          </article>
+        </div>
+        <aside class="notes">For club signups, alternatives might include a shared board, a structured chat workflow, or a different staffing process. The goal is to explore possible solutions rather than accept the first thing an agent builds.</aside>
+      </section>
+
+      <section id="prototypes" data-title="Prototypes">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">MAKE A QUESTION TESTABLE</span>
+        </div>
+        <h2><em>Prototypes</em></h2>
+        <div class="comparison">
+          <article><span class="label">RAPID AI BUILDS</span>
+            <h3>Try working software.</h3>
+            <p>Use AI to create the smallest interaction that tests an important assumption.</p>
+          </article>
+          <article class="accent-panel"><span class="label">PAPER SKETCHES</span>
+            <h3>Try the idea cheaply.</h3>
+            <p>Explore screens and workflows before investing in a software implementation.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>RUNNING EXAMPLE</span>
+          <p>Can a club member find and claim an open shift without an explanation?</p>
+        </div>
+        <aside class="notes">Paper sketches complement the course's AI-only software implementation rule. A prototype does not need production architecture. Build only enough to learn something from the intended user.</aside>
+      </section>
+
+      <section id="validation" data-title="Validation">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">GET EVIDENCE, NOT JUST APPROVAL</span>
+        </div>
+        <h2><em>Validation</em></h2>
+        <div class="comparison">
+          <article><span class="label">WITH STAKEHOLDERS</span>
+            <h3>Review the prototype.</h3>
+            <p>Let people try the workflow. What can they do? Where do they get stuck?</p>
+          </article>
+          <article class="accent-panel"><span class="label">IN THE STUDIO</span>
+            <h3>Review with the class.</h3>
+            <p>Expose assumptions, discuss the fit, and identify the next thing to test.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>DIFFERENT SOURCES OF FEEDBACK</span>
+          <p>Classmates can critique a design; real stakeholders establish whether it fits their needs.</p>
+        </div>
+        <aside class="notes">Review prototypes with stakeholders and in class. Ask people to attempt the task before explaining the interface. Peer review supplies useful feedback, but it is not a substitute for validation with the people who experience the problem.</aside>
+      </section>
+
+      <section id="iterate" data-title="Iterate">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">APPLY LEARNINGS AND REVALIDATE</span>
+        </div>
+        <h2><em>Iterate</em></h2>
+        <div class="revision-flow">
+          <article><span class="label">LEARN FROM THE PROTOTYPE</span>
+            <h3>“How do I change the app?”</h3>
+            <p>Illustrative feedback: a member cannot find their confirmed signup.</p>
+          </article><span class="flow-arrow" aria-hidden="true">→</span>
+          <article><span class="label">APPLY THE LEARNING</span>
+            <h3>Try various options.</h3>
+            <p>Use AI to make different versions of the interface and work with the users for confirmation.</p>
+          </article><span class="flow-arrow" aria-hidden="true">→</span>
+          <article><span class="label">REVALIDATE</span>
+            <h3>Try it again.</h3>
+            <p>Can the stakeholder complete the task unaided now?</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>NOT JUST MORE FEATURES</span>
+          <p>Every revision should connect to something the team learned.</p>
+        </div>
+        <aside class="notes">Apply learnings from prototypes and revalidate. The sample feedback is invented for illustration. Iteration may change the interface, the workflow, or the understanding of the problem itself.</aside>
+      </section>
+
+      <section id="studio" data-title="Studio">
+        <div class="section-heading">
+          <p class="eyebrow">STUDIO PRACTICE</p><span class="margin-note">THE RECURRING LEARNING ENVIRONMENT</span>
+        </div>
+        <h2><em>Studio</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Work on the project</h3>
+            <p>Teams build, investigate, and bring work in progress into the room.</p>
+          </article>
+          <article>
+            <h3>Make thinking and AI visible</h3>
+            <p>Show the problem, the choices, the evidence, and the open questions. Clearly understand and communicate the role of AI in the process.</p>
+          </article>
+          <article>
+            <h3>Use the feedback</h3>
+            <p>Critique informs the next prototype and the next engineering decision.</p>
+          </article>
+        </div>
+        <aside class="notes">This is the recurring class environment, not yet the hands-on portion of today's session. Connect studio practice to the design loop: building, sharing, feedback, and revision continue throughout the project.</aside>
+      </section>
+
+      <section id="studio-review" data-title="Studio Review">
+        <div class="section-heading">
+          <p class="eyebrow">STUDIO PRACTICE</p><span class="margin-note">MULTIPLE FORMS OF FEEDBACK</span>
+        </div>
+        <h2>Types of <em>Studio Review</em></h2>
+        <div class="quality-grid">
+          <article><span class="label">PINUP REVIEWS</span>
+            <h3>Show work in progress.</h3>
+            <p>Make artifacts visible and invite discussion while choices can still change.</p>
+          </article>
+          <article><span class="label">AI REVIEWS</span>
+            <h3>Get an early critique.</h3>
+            <p>Use agents to question artifacts and identify assumptions worth checking.</p>
+          </article>
+          <article><span class="label">PARTNER REVIEWS</span>
+            <h3>Learn from classmates.</h3>
+            <p>Try each other's work and give specific, actionable feedback.</p>
+          </article>
+          <article><span class="label">JURY PRESENTATIONS</span>
+            <h3>Defend the project.</h3>
+            <p>Present progress and reasoning to a broader audience.</p>
+          </article>
+        </div>
+        <aside class="notes">Distinguish lightweight recurring reviews from substantial jury presentations. Critique the work, not the person. AI reviews augment rather than replace peers, stakeholders, and instructors.</aside>
+      </section>
+
+      <section id="jury" data-title="I Love How CMU Does This">
+        <div class="section-heading">
+          <p class="eyebrow">STUDIO PRACTICE</p><span class="margin-note">THE PRESENTER'S CMU EXPERIENCE</span>
+        </div>
+        <h2>I love how <em>CMU does this</em></h2>
+        <p class="section-intro">Three substantial project presentations over the course of the project.</p>
+        <div class="three-columns">
+          <article>
+            <h3>Present progress</h3>
+            <p>Explain what the team has done and what it has learned.</p>
+          </article>
+          <article>
+            <h3>Defend the work</h3>
+            <p>Discuss technical choices, project management, and other relevant areas.</p>
+          </article>
+          <article>
+            <h3>Grade both</h3>
+            <p>Significant assessment of the presentation itself and the work being presented.</p>
+          </article>
+        </div>
+        <div class="jury-audience"><span class="label">THE AUDIENCE</span><span>Stakeholders</span><span>Classmates</span><span>Mentors</span><span>Faculty</span></div>
+        <aside class="notes">Describe the practice from your CMU experience, not as an institution-wide policy. Students present three times and are graded heavily on both their presentation and its substance. Do not invent official milestone names or a grading formula.</aside>
+      </section>
+
+      <section id="scale" data-title="Studio Scale Problems">
+        <div class="section-heading">
+          <p class="eyebrow">STUDIO PRACTICE</p><span class="margin-note">AI CAN EXTEND ACCESS TO FEEDBACK</span>
+        </div>
+        <h2>Studio <em>Scale Problems</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Coach agents</h3>
+            <p>First-pass desk critiques on design artifacts before instructor feedback.</p>
+          </article>
+          <article>
+            <h3>Stakeholder simulators</h3>
+            <p>Practice interviews before talking to real people.</p>
+          </article>
+          <article>
+            <h3>Architecture reviewers</h3>
+            <p>Push back on building-material choices using quality attributes.</p>
+          </article>
+        </div>
+        <div class="thesis-bar">Agents help with scale. They do not replace real stakeholders or instructor judgment.</div>
+        <aside class="notes">These are proposed mechanisms for addressing the feedback demands of a studio, not demonstrated results for this course. A simulator is rehearsal, not user research. Check the quality of agent feedback rather than treating it as authoritative.</aside>
+      </section>
+
+      <section id="decisions" data-title="Introducing Software Engineering">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">AFTER STUDENTS ARE ALREADY BUILDING</span>
+        </div>
+        <h2>Introducing<br /><em>Software Engineering</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Remove the training wheels</h3>
+            <p>Move beyond the starter's preselected technologies and defaults.</p>
+          </article>
+          <article class="fragment" data-fragment-index="0">
+            <h3>Students make the decisions</h3>
+            <p>Compare alternatives and explain why the chosen technology fits the problem.</p>
+          </article>
+          <article class="fragment" data-fragment-index="1">
+            <h3>Write and grade ADRs</h3>
+            <p>Assess reasoning quality and the application of quality attributes to the problem space.</p>
+          </article>
+        </div>
+        <aside class="notes">Introduce explicit software engineering after students have built and encountered real questions. Require students to own the decisions rather than accept agent defaults. ADR means architecture decision record. Grade the argument and its connection to project quality needs, not just the existence of a document.</aside>
+      </section>
+
+      <section id="adr" data-title="Architecture Decision Records">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">A CONCRETE ADR EXAMPLE</span>
+        </div>
+        <h2>Architecture <em>Decision Records</em></h2>
+        <div class="adr-sheet">
+          <div class="adr-heading"><span class="label">ADR 001 / SHIFT SIGNUPS</span><span class="label">ILLUSTRATIVE PROPOSAL</span></div>
+          <dl>
+            <div>
+              <dt>Context</dt>
+              <dd>Two people may try to claim the last available shift.</dd>
+            </div>
+            <div>
+              <dt>Options</dt>
+              <dd>Validate only in the interface, or enforce capacity in the backend and datastore.</dd>
+            </div>
+            <div>
+              <dt>Decision</dt>
+              <dd>Use an atomic backend operation to enforce capacity; use the interface for feedback.</dd>
+            </div>
+            <div>
+              <dt>Tradeoff</dt>
+              <dd>More backend complexity in exchange for data integrity under concurrent use.</dd>
+            </div>
+            <div>
+              <dt>Evidence</dt>
+              <dd>Test concurrent claims: capacity is respected and the unsuccessful user is told why.</dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="notes">Use this as a concrete continuation of introducing ADRs. Students should explain context, options, relevant quality attributes, the decision, and consequences. Ask them to show that the implemented system honors the decision. “The agent recommended it” is not sufficient reasoning.</aside>
+      </section>
+
+      <section id="materials" data-title="Building Materials">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">DIFFERENT MATERIALS FOR DIFFERENT NEEDS</span>
+        </div>
+        <h2>Building <em>Materials</em></h2>
+        <div class="materials-layout">
+          <div class="material-controls" role="group" aria-label="Explore building materials"><button type="button" aria-pressed="true">Databases</button><button type="button" aria-pressed="false">Frameworks</button><button type="button" aria-pressed="false">Languages</button><button type="button" aria-pressed="false">Open source</button><button type="button" aria-pressed="false">Servers</button></div>
+          <article class="material-sheet" aria-live="polite"><span class="label" id="material-kicker">PERSISTENCE / RELATIONSHIPS / OPERATIONS</span>
+            <h3 id="material-title">How should this system remember?</h3>
+            <p id="material-description">Relational, document, and key-value databases organize data differently. Begin with the access patterns and consistency your problem needs.</p>
+            <div class="material-question"><span class="label">ASK THE AGENT</span>
+              <p id="material-question">Compare two options for event shifts and signups. Explain integrity, migrations, and operational burden.</p>
+            </div>
+          </article>
+        </div>
+        <aside class="notes">Explore databases, frameworks, languages, open-source software packages, and server technologies. Each has different qualities and costs. Use agents to compare options, then verify consequential claims against documentation and project evidence.</aside>
+      </section>
+
+      <section id="qualities" data-title="Software Quality Attributes">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">ATTRIBUTE-DRIVEN DESIGN</span>
+        </div>
+        <h2>Software <em>Quality Attributes</em></h2>
+        <div class="quality-grid">
+          <article><span class="label">CORE ATTRIBUTES</span>
+            <h3>What matters here?</h3>
+            <p>Usability, reliability, availability, performance, scalability, security, privacy, and modifiability.</p>
+          </article>
+          <article><span class="label">TRADEOFFS</span>
+            <h3>No system maximizes everything.</h3>
+            <p>Discuss what a choice improves, what it costs, and whose needs take priority.</p>
+          </article>
+          <article><span class="label">BUILDING MATERIALS</span>
+            <h3>Choose for the qualities needed.</h3>
+            <p>Use prioritized quality needs to guide technologies and architecture.</p>
+          </article>
+          <article><span class="label">AGENT DISCUSSION</span>
+            <h3>Compare architecture options.</h3>
+            <p>Ask an agent to challenge tradeoffs; students verify the claims and decide.</p>
+          </article>
+        </div>
+        <aside class="notes">Make qualities concrete through scenarios: a member claims a shift on a phone, or many members sign up at once. Add measurable criteria with the stakeholder rather than inventing thresholds. Attribute-driven design connects those needs to structures and materials.</aside>
+      </section>
+
+      <section id="throwing-curveballs" data-title="Throwing Curveballs">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">SIMULATE REAL-WORLD CONSTRAINTS</span>
+        </div>
+        <h2>Throwing <em>Curveballs</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Change the conditions</h3>
+            <p>A package disappears. A technology is banned. A new requirement arrives.</p>
+          </article>
+          <article>
+            <h3>Make it playful</h3>
+            <p>Use prepared, gameshow-style surprises to make teams revisit decisions.</p>
+          </article>
+          <article>
+            <h3>Let stakeholders change</h3>
+            <p>Real people will learn through the design process and change their minds.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>THE TEACHING GOAL</span>
+          <p>Explain the consequences, adapt the system, and defend the new choices.</p>
+        </div>
+        <aside class="notes">Curveballs simulate constraints without sabotaging the actual learning environment. Keep them proportionate and reversible. The next slide connects specific curveballs to quality attributes; the workshop will let participants try one.</aside>
+      </section>
+
+      <section id="curveball-examples" data-title="Example Curveballs">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">CONSTRAINTS → QUALITY ATTRIBUTES</span>
+        </div>
+        <h2>Example <em>Curveballs</em></h2>
+        <table class="curveball-table">
+          <thead>
+            <tr>
+              <th>Curveball</th>
+              <th>Quality attribute it hits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A package you depend on disappears</td>
+              <td>Maintainability, modifiability</td>
+            </tr>
+            <tr>
+              <td>The club now needs this on phones</td>
+              <td>Usability, portability</td>
+            </tr>
+            <tr>
+              <td>Usage jumps 10× for an event</td>
+              <td>Scalability, performance</td>
+            </tr>
+            <tr>
+              <td>The stakeholder wants member data private</td>
+              <td>Security, privacy</td>
+            </tr>
+            <tr>
+              <td>A technology is banned</td>
+              <td>Modifiability, architectural flexibility</td>
+            </tr>
+          </tbody>
+        </table>
+        <aside class="notes">Return to the earlier idea of throwing curveballs, now with explicit quality attributes. These are useful starting associations, not exclusive mappings. Any constraint may affect several qualities.</aside>
+      </section>
+
+      <section id="production" data-title="Building for Production">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">FROM PROTOTYPE TO DEPENDABLE SOFTWARE</span>
+        </div>
+        <h2>Building <em>for Production</em></h2>
+        <div class="production-planes">
+          <article>
+            <h3>Define architecture</h3>
+            <p>Boundaries, responsibilities, and data.</p>
+          </article>
+          <article>
+            <h3>Define environment</h3>
+            <p>Configuration, secrets, and reproducible setup.</p>
+          </article>
+          <article>
+            <h3>Help the agent</h3>
+            <p>Harness engineering, tests, linters, CI, and security tooling.</p>
+          </article>
+          <article>
+            <h3>Deploy to the cloud</h3>
+            <p>Services, access, backups, and recovery.</p>
+          </article>
+        </div>
+        <aside class="notes">Students define both architecture and software environment. Checks and feedback help the agent produce good code but do not guarantee correctness or security. Keep secrets out of prompts and source control. Match operational complexity to the project's real needs.</aside>
+      </section>
+
+      <section id="shipping" data-title="Shipping">
+        <div class="section-heading">
+          <p class="eyebrow">SOFTWARE ENGINEERING</p><span class="margin-note">OPERATING AND CHANGING REAL SOFTWARE</span>
+        </div>
+        <h2><em>Shipping</em></h2>
+        <div class="quality-grid">
+          <article><span class="label">OBSERVABILITY</span>
+            <h3>See what is happening.</h3>
+            <p>Logs, metrics, and user reports make system behavior visible.</p>
+          </article>
+          <article><span class="label">DIAGNOSIS</span>
+            <h3>Investigate production problems.</h3>
+            <p>Use AI to propose explanations; test them against evidence.</p>
+          </article>
+          <article><span class="label">DATABASE MIGRATIONS</span>
+            <h3>Evolve the data safely.</h3>
+            <p>Plan schema changes, verify migrations, and consider recovery.</p>
+          </article>
+          <article><span class="label">SAFE RELEASES</span>
+            <h3>Limit the impact of change.</h3>
+            <p>Introduce feature flags, canary deployments, and rollback plans.</p>
+          </article>
+        </div>
+        <aside class="notes">Shipping includes learning to operate and evolve software. Keep the depth proportionate to the project. Explain that rolling back code does not necessarily restore migrated data. Establish who owns the service after the class.</aside>
+      </section>
+
+      <section id="workshop" data-title="Now We Will Run a Studio">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">COURSE EXPLANATION ENDS · HANDS-ON WORK BEGINS</span>
+        </div>
+        <h2>Now we will<br /><em>run a studio.</em></h2>
+        <p class="section-intro">Experience the learning environment we just described.</p>
+        <div class="three-columns">
+          <article>
+            <h3>Meet another team</h3>
+            <p>Form teams of 2. Find another team and learn about a problem they have.</p>
+          </article>
+          <article>
+            <h3>Build with AI</h3>
+            <p>Explore alternatives and create a small working prototype.</p>
+          </article>
+          <article>
+            <h3>Review and revise</h3>
+            <p>Share the work, respond to a curveball, and explain what changed.</p>
+          </article>
+        </div>
+        <aside class="notes">Make the transition explicit: we have finished explaining the course and are now running a short studio. Confirm everyone has access to an AI coding tool and a tested starter. Set build and review intervals appropriate to the session. This deck does not provide a hosted coding agent.</aside>
+      </section>
+
+      <section id="problem-briefs" data-title="Studio: Exchange Problems">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">TEAMS OF 2 · REAL PROBLEMS</span>
+        </div>
+        <h2>Studio: <em>Exchange Problems</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Team up</h3>
+            <p>Everyone works in a team of 2. Find another team to work with.</p>
+          </article>
+          <article>
+            <h3>Listen both ways</h3>
+            <p>Discuss a real problem the other team has. Share a problem of your own, too.</p>
+          </article>
+          <article>
+            <h3>Propose a solution</h3>
+            <p>Today, each team will propose a solution to the other team's problem.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>START BY ASKING</span>
+          <p>When did this last happen? What do you do today? What would make it better?</p>
+        </div>
+        <aside class="notes">Make sure everyone is in a team of exactly two, then pair each team with another team. Participants choose their own real problems; do not assign a prepared brief. Give both teams a turn to describe a problem and ask about the other's current workflow. Each team proposes a solution to the other team's problem today. Sketch alternatives before building, and return to that same team for feedback.</aside>
+      </section>
+
+      <section id="studio-ideate" data-title="Studio: Ideate">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">LUMA'S CREATIVE MATRIX</span>
+        </div>
+        <h2>Studio: <em>Ideate</em></h2>
+        <p class="section-intro">Cross problem moments with ways to help. Each intersection sparks a different idea.</p>
+        <table class="creative-matrix" aria-label="Example Creative Matrix: problem moments crossed with solution enablers">
+          <thead>
+            <tr><th scope="col">Ways to help / Moments</th><th scope="col">Getting started</th><th scope="col">Doing the task</th><th scope="col">Following up</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">People &amp; support</th><td>Who could guide them?</td><td>Who could help out?</td><td>Who could give feedback?</td></tr>
+            <tr><th scope="row">Digital tools</th><td>What could clarify the first step?</td><td>What could a tool automate?</td><td>What could show progress?</td></tr>
+            <tr><th scope="row">Process changes</th><td>What setup could disappear?</td><td>What step could be simpler?</td><td>What handoff could improve?</td></tr>
+          </tbody>
+        </table>
+        <div class="slide-note"><span>5-MINUTE SPRINT</span>
+          <p>1 min: tailor the axes. 3 min: add ideas across cells, without judging. 1 min: choose one to prototype.</p>
+        </div>
+        <p class="fine-print below">Example prompts, not assigned solutions. Adapt to the other team's problem. Method: <a href="https://www.luma-institute.com/creative-matrix/" target="_blank" rel="noopener noreferrer">LUMA Institute: Creative Matrix</a>.</p>
+        <aside class="notes">Introduce LUMA Institute's Creative Matrix as a structured way to generate varied ideas quickly. LUMA recommends columns related to people or problems and rows that enable solutions, such as technologies, environments, or policies. This adapted example uses moments in the other team's workflow as columns and people, tools, and process changes as enablers. Spend one minute replacing the headings with categories relevant to the problem you just heard. Spend three minutes writing or sketching ideas at different intersections, one idea per sticky note; both teammates contribute and defer evaluation. Aim for variety rather than filling every cell. Spend the last minute comparing ideas and choosing one promising direction and an assumption to test in the next slide's prototype. The five-minute timing and example prompts are suggestions for this workshop, not a prescribed LUMA format. Source: https://www.luma-institute.com/creative-matrix/</aside>
+      </section>
+
+      <section class="activity" id="prototype" data-title="Studio: Build with AI">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">PAUSE HERE · BUILD TOGETHER</span>
+        </div>
+        <h2>Studio: <em>Build with AI</em></h2>
+        <div class="activity-layout">
+          <div class="activity-prompt"><span class="label">YOUR TASK</span>
+            <p>Use AI to build a small prototype that tests one important assumption.</p><span class="fine-print">Sketch alternatives first. AI writes the software; you direct and evaluate it.</span>
+          </div>
+          <div class="deliverables"><span class="label">BRING BACK</span>
+            <p>Something another person can try.</p>
+            <p>The assumption it tests.</p>
+            <p>One question for your reviewers.</p>
+          </div>
+        </div>
+        <div class="thesis-bar">Build for the other team's problem. What should they be able to try without explanation?</div>
+        <aside class="notes">Give participants a build interval. Use the prepared starter and synthetic data; avoid spending the activity on accounts or credentials. A local prototype is sufficient. Everyone should build software with AI, even if paper sketches precede the implementation.</aside>
+      </section>
+
+      <section id="pinup" data-title="Studio: Pinup Review">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">TRY EACH OTHER'S PROTOTYPES</span>
+        </div>
+        <h2>Studio: <em>Pinup Review</em></h2>
+        <div class="two-column">
+          <div class="pinup-sheet"><span class="label">SHOW THE WORK</span>
+            <h3>Here is what we tried.</h3>
+            <p>Here is the assumption.<br />Here is a choice we made.<br />Here is where we are uncertain.</p>
+            <div class="pinup-rule"></div><span class="fine-print">Show work in progress, not a polished performance.</span>
+          </div>
+          <div class="stack-list">
+            <article>
+              <div>
+                <h3>Try it before the explanation</h3>
+                <p>What can you do without help?</p>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Discuss the problem fit</h3>
+                <p>Whose need does it serve? What is still assumed?</p>
+              </div>
+            </article>
+            <article>
+              <div>
+                <h3>Suggest a next experiment</h3>
+                <p>Make feedback specific enough to use.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <aside class="notes">Return to the team whose problem you are addressing and invite a few examples into the room. Each team presents its proposed solution and lets the other team try it. Critique artifacts and choices, not people. Ask whether the proposal addresses the problem they described; a short review is useful feedback, not complete validation.</aside>
+      </section>
+
+      <section id="curveball" data-title="Studio: Respond to a Curveball">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">A NEW CONSTRAINT</span>
+        </div>
+        <h2>Studio: <em>A Curveball</em></h2>
+        <div class="curveball-layout">
+          <div class="curveball-card" aria-live="polite"><span class="label" id="curveball-label">DEPENDENCIES</span>
+            <h3 id="curveball-title">A package you depend on disappears.</h3>
+            <p id="curveball-context">The signup component is no longer available. Your next release still needs to work.</p>
+          </div>
+          <div class="curveball-action"><span class="label">YOUR RESPONSE</span>
+            <p>What breaks?<br />What stays?<br />What will you change?</p><button type="button" id="next-curveball" class="begin-button">Reveal next condition <span aria-hidden="true">↗</span></button><span class="fine-print">Prepared teaching scenarios; nothing is removed from your environment.</span>
+          </div>
+        </div>
+        <div class="condition-controls" role="group" aria-label="Choose a curveball"><button type="button" aria-pressed="true">Package disappears</button><button type="button" aria-pressed="false">Phones first</button><button type="button" aria-pressed="false">10× usage</button><button type="button" aria-pressed="false">Private data</button><button type="button" aria-pressed="false">Technology banned</button></div>
+        <aside class="notes">Choose one constraint for the room rather than introducing all five at once. Ask teams to explain the impact, revise with AI, and try the result again. Do not actually remove tools or dependencies. The next slide carries the selected condition into the quality discussion.</aside>
+      </section>
+
+      <section id="constraint-architecture" data-title="Studio: Revise and Explain">
+        <div class="section-heading">
+          <p class="eyebrow">THE SHARED STUDIO</p><span class="margin-note">CONNECT THE REVISION TO QUALITY ATTRIBUTES</span>
+        </div>
+        <h2>Studio: <em>Revise and Explain</em></h2>
+        <div class="architecture-study" aria-live="polite">
+          <div><span class="label">THE CONDITION</span>
+            <h3 id="architecture-condition">A package you depend on disappears.</h3>
+          </div>
+          <div><span class="label">QUALITIES UNDER PRESSURE</span>
+            <h3 id="architecture-qualities">Maintainability · Modifiability</h3>
+          </div>
+          <div><span class="label">THE ARCHITECTURAL QUESTION</span>
+            <p id="architecture-question">Can you replace the dependency without rewriting the signup workflow?</p>
+          </div>
+        </div>
+        <div class="condition-controls" role="group" aria-label="Explore architectural consequences"><button type="button" aria-pressed="true">Package disappears</button><button type="button" aria-pressed="false">Phones first</button><button type="button" aria-pressed="false">10× usage</button><button type="button" aria-pressed="false">Private data</button><button type="button" aria-pressed="false">Technology banned</button></div>
+        <div class="slide-note"><span>REPORT BACK</span>
+          <p>What changed, why did you choose it, and what evidence says it works?</p>
+        </div>
+        <aside class="notes">Give teams time to revise and revalidate, then debrief the shared studio. Connect their experience to design thinking, review, material choices, and quality tradeoffs. The condition selectors stay synchronized with the preceding slide. Ask for one decision that could become an ADR.</aside>
+      </section>
+
+      <section class="guest" id="geoffrey" data-title="Geoffrey Challen: A Similar Class in Practice">
+        <div class="section-heading">
+          <p class="eyebrow">EXPERIENCES FROM PRACTICE</p><span class="margin-note">GUEST DISCUSSION</span>
+        </div>
+        <div class="guest-grid">
+          <div>
+            <p class="guest-pretitle">A similar class<br /><em>in practice</em></p>
+            <h2>Geoffrey<br />Challen</h2>
+          </div>
+          <div class="guest-questions"><span class="label">RUNNING A REAL VERSION</span>
+            <h3>What do we learn from running the class?</h3>
+            <p>Students building with AI.<br />How students work with agents.<br />Experience with prompt logging.</p>
+          </div>
+        </div>
+        <aside class="notes">Hand off to Geoffrey to discuss running a real version of a similar class, including his experience with prompts and AI use. Confirm his introduction. These are topics for his discussion, not invented findings.</aside>
+      </section>
+
+      <section class="guest" id="swift" data-title="Swift: Hackathons as a Learning Environment">
+        <div class="section-heading">
+          <p class="eyebrow">EXPERIENCES FROM PRACTICE</p><span class="margin-note">GUEST DISCUSSION</span>
+        </div>
+        <div class="guest-grid">
+          <div>
+            <p class="guest-pretitle">Hackathons as<br /><em>a learning environment</em></p>
+            <h2>Swift</h2>
+          </div>
+          <div class="guest-questions"><span class="label">ANOTHER ENVIRONMENT FOR MAKING</span>
+            <h3>Learning through hackathons</h3>
+            <p>Building with others.<br />Working under constraints.<br />Learning by making something real.</p>
+          </div>
+        </div>
+        <aside class="notes">Hand off to Swift to discuss hackathons as a learning environment. Confirm the preferred introduction and title. Do not present these discussion topics as findings from Swift's talk.</aside>
+      </section>
+
+      <section class="closing" id="close" data-title="Discussion">
+        <p class="eyebrow"><span class="small-rule"></span> TEACHING SOFTWARE ENGINEERING IN A STUDIO CLASS WITH AI</p>
+        <h2><em>Discussion</em></h2>
+        <p>What would you keep, change, or test in this class idea?<br />What did the shared studio make visible?</p>
+        <div class="closing-footer"><span class="chapter-label">PROBLEMS · PROCESS · BUILDING MATERIALS · QUALITY</span><button id="restart" class="begin-button" disabled>Return to the beginning <span aria-hidden="true">↗</span></button></div>
+        <aside class="notes">Invite discussion of the course proposal and the studio experience. Return to the central teaching shift: AI builds the software while students learn to own the problem, process, material choices, and quality.</aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="deck-footer">
+    <div class="footer-title"><span class="footer-cross" aria-hidden="true">+</span><span id="slide-title">Teaching Software Engineering in a Studio Class with AI</span></div>
+    <div class="navigation"><span class="keyboard-hint">← → TO EXPLORE</span><button id="previous" class="nav-button" aria-label="Previous slide" disabled>←</button><span class="slide-count"><span id="slide-number">01</span><span class="count-divider">/</span><span id="slide-total"></span></span><button id="next" class="nav-button" aria-label="Next slide" disabled>→</button></div>
+  </footer>
+  <div class="deck-progress" aria-hidden="true">
+    <div id="progress"></div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

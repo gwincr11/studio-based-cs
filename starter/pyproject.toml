@@ -1,0 +1,23 @@
+[project]
+name = "studio-flask-starter"
+version = "0.1.0"
+description = "Flask and React Islands starter for the shared studio"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+exclude = ["venv", ".venv", "migrations"]
+
+[tool.flake8]
+max-line-length = 120
+exclude = [".venv", "venv", "migrations", "__pycache__", ".git"]
+ignore = ["W503"]

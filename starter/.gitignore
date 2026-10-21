@@ -1,0 +1,12 @@
+.venv/
+.env
+instance/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
+frontend/node_modules/
+src/app/static/assets/
+src/app/static/.vite/
+playwright-report/
+test-results/

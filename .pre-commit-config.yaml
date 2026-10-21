@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+  - repo: local
+    hooks:
+      - id: starter-lint
+        name: Starter lint
+        entry: starter/script/lint
+        language: system
+        files: ^starter/
+        pass_filenames: false
+      - id: starter-typecheck
+        name: Starter typecheck
+        entry: starter/script/typecheck
+        language: system
+        files: ^starter/
+        pass_filenames: false

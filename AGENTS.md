@@ -14,3 +14,6 @@ Do not mix the presentation's npm dependencies with the starter's packages.
 Use the planning, plan-review, refactoring, and browser-testing helpers when
 requested. Make focused changes, keep meaningful checks enabled, and report
 failures explicitly. Do not commit `.env` files or real participant data.
+
+
+ALWAYS ASK WHERE CHANGES SHOULD BE MADE BEFORE EDITING FILES OR MAKING PLANS.

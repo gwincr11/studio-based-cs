@@ -5,7 +5,7 @@ export default defineConfig({
   reporter: 'list',
   use: { baseURL: 'http://127.0.0.1:5001' },
   webServer: {
-    command: 'npm --prefix frontend run build && PYTHONPATH=src .venv/bin/python e2e/server.py',
+    command: 'npm --prefix frontend run build && PYTHONPATH=src python3 e2e/server.py',
     url: 'http://127.0.0.1:5001',
     reuseExistingServer: false,
   },

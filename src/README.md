@@ -35,12 +35,18 @@ Requires Python 3.12+, Node.js 22.12+, and a running PostgreSQL server with
 ./scripts/start-app
 ```
 
-Setup creates `.venv/` and `.env`, installs the locked npm dependencies, creates
+Setup installs Python dependencies into the current environment, creates `.env`,
+installs the locked npm dependencies, creates
 the default local `studio_app` database if needed, applies migrations, and builds
 React assets. The server starts at port 5000 and automatically tries higher ports
 if it is occupied. Open the URL printed in the terminal. Use
 `PORT=5050 ./scripts/start-app` to start the search at a different port, or `PORT=0` to
 let the operating system choose an available port.
+
+Codespaces uses the container's Python directly; no virtual environment is needed.
+Outside Codespaces, optionally create and activate a virtual environment before
+running setup if you want to keep these dependencies separate. Setup does not
+override Python's protections for externally managed environments.
 
 For a different PostgreSQL server, copy `.env.example` to `.env` and set
 `DATABASE_URL` before running setup, or export it in the environment. Create the
@@ -64,7 +70,7 @@ browser-testing, and commit helpers. `.vscode/mcp.json` configures a headless
 Playwright MCP server for VS Code; approve its use when prompted. Automated
 browser tests also work without MCP.
 
-The harness is instructions + isolated dependencies + migrations + lint/type
+The harness is instructions + dependencies + migrations + lint/type
 checks + unit/component/browser tests + pre-commit hooks + CI. There is no
 autonomous build loop, tutorial exercise, or prefilled implementation plan.
 
@@ -87,14 +93,14 @@ applies migrations and checks model/schema consistency against PostgreSQL 16.
 For model changes, run these commands from `src/`:
 
 ```sh
-.venv/bin/flask --app src.app:create_app db migrate -m "describe the change"
+python3 -m flask --app src.app:create_app db migrate -m "describe the change"
 # Review the generated migration.
-.venv/bin/flask --app src.app:create_app db upgrade
-.venv/bin/flask --app src.app:create_app db check
+python3 -m flask --app src.app:create_app db upgrade
+python3 -m flask --app src.app:create_app db check
 ```
 
 To install the repository's pre-commit hooks locally, run
-`src/.venv/bin/pre-commit install` from the repository root.
+`python3 -m pre_commit install` from the repository root.
 
 ## Deploy on Render
 

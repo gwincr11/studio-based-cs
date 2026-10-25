@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/../src"
-.venv/bin/python -m pytest
+python3 -m pytest
 npm --prefix frontend test

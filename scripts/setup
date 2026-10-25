@@ -13,6 +13,6 @@ if [ -z "${DATABASE_URL:-}" ] && grep -qx 'DATABASE_URL=postgresql:///studio_app
         createdb studio_app
     fi
 fi
-.venv/bin/flask --app src.app:create_app db upgrade
+python3 -m flask --app src.app:create_app db upgrade
 npm --prefix frontend run build
 echo "Ready. Run scripts/start-app from the repository root."

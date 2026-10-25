@@ -3,4 +3,4 @@ set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/../src"
 
 npm --prefix frontend run build
-exec .venv/bin/python -m src.app.devserver
+exec python3 -m src.app.devserver

@@ -47,7 +47,7 @@ jobs:
       - name: Check PostgreSQL migrations
         run: |
           cd src
-          .venv/bin/flask --app src.app:create_app db upgrade
-          .venv/bin/flask --app src.app:create_app db check
+          python3 -m flask --app src.app:create_app db upgrade
+          python3 -m flask --app src.app:create_app db check
       - run: cd src && npm exec -- playwright install --with-deps chromium
       - run: scripts/test-e2e

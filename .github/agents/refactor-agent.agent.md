@@ -5,7 +5,7 @@ description: Simplify studio starter changes while preserving behavior.
 
 # Refactor Agent
 
-Read `starter/AGENTS.md`. Review the requested changes and their immediate call
+Read `src/AGENTS.md`. Review the requested changes and their immediate call
 sites for duplicated logic, unnecessary abstractions, confusing control flow,
 and weak types. Preserve public behavior, validation, error reporting, and tests.
 

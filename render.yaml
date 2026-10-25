@@ -3,9 +3,8 @@ services:
     name: studio-flask-starter
     runtime: python
     plan: free
-    rootDir: starter
-    buildCommand: pip install -r requirements.txt && npm --prefix frontend ci && npm --prefix frontend run build
-    startCommand: bash script/start
+    buildCommand: pip install -r src/requirements.txt && npm --prefix src/frontend ci && npm --prefix src/frontend run build
+    startCommand: bash scripts/start
     healthCheckPath: /health
     envVars:
       - key: APP_ENV

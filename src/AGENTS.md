@@ -1,13 +1,14 @@
 # Flask starter
 
-Run commands from `starter/`.
+Run app commands from the repository root; the scripts in `scripts/` enter
+`src/` automatically.
 
 ## Setup and run
 
-- `script/setup`: installs isolated Python and Node dependencies, creates `.env`
+- `scripts/setup`: installs isolated Python and Node dependencies, creates `.env`
   if needed, creates the default local PostgreSQL database, applies migrations,
   and builds the frontend. PostgreSQL must be running.
-- `script/server`: builds frontend assets and serves Flask on the first available
+- `scripts/start-app`: builds frontend assets and serves Flask on the first available
   port starting at 5000 (or `PORT`). Open the URL printed in the terminal.
 - `npm --prefix frontend run dev`: rebuilds assets while editing;
   refresh the Flask page to load changes.
@@ -17,10 +18,10 @@ Run commands from `starter/`.
 
 ## Validation
 
-- `script/lint`: flake8 and ESLint.
-- `script/typecheck`: strict mypy and TypeScript.
-- `script/test`: pytest and Vitest.
-- `script/test-e2e`: Playwright, including an isolated migrated SQLite database.
+- `scripts/lint`: flake8 and ESLint.
+- `scripts/typecheck`: strict mypy and TypeScript.
+- `scripts/test`: pytest and Vitest.
+- `scripts/test-e2e`: Playwright, including an isolated migrated SQLite database.
   Install Chromium first with `npm exec -- playwright install chromium`.
 - `.venv/bin/flask --app src.app:create_app db check`: check models against the
   migrated PostgreSQL database. CI runs this with PostgreSQL 16.

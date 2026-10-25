@@ -2,9 +2,9 @@ name: Flask starter
 
 on:
   push:
-    paths: ["starter/**", ".github/workflows/starter.yml", ".devcontainer/**"]
+    paths: ["src/**", "scripts/**", ".github/workflows/starter.yml", ".devcontainer/**"]
   pull_request:
-    paths: ["starter/**", ".github/workflows/starter.yml", ".devcontainer/**"]
+    paths: ["src/**", "scripts/**", ".github/workflows/starter.yml", ".devcontainer/**"]
   workflow_dispatch:
 
 permissions:
@@ -13,9 +13,6 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: starter
     services:
       postgres:
         image: postgres:16
@@ -41,15 +38,16 @@ jobs:
           node-version: "22"
           cache: npm
           cache-dependency-path: |
-            starter/package-lock.json
-            starter/frontend/package-lock.json
-      - run: script/bootstrap
-      - run: script/lint
-      - run: script/typecheck
-      - run: script/test
+            src/package-lock.json
+            src/frontend/package-lock.json
+      - run: scripts/bootstrap
+      - run: scripts/lint
+      - run: scripts/typecheck
+      - run: scripts/test
       - name: Check PostgreSQL migrations
         run: |
+          cd src
           .venv/bin/flask --app src.app:create_app db upgrade
           .venv/bin/flask --app src.app:create_app db check
-      - run: npm exec -- playwright install --with-deps chromium
-      - run: script/test-e2e
+      - run: cd src && npm exec -- playwright install --with-deps chromium
+      - run: scripts/test-e2e

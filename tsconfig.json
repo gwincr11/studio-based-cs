@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "isolatedModules": true
   },
-  "include": ["src", "tests", "playwright.config.ts"]
+  "include": ["slides", "tests", "playwright.config.ts"]
 }

@@ -182,7 +182,7 @@
             <tr><td>Building with AI</td><td>Build a small website.</td></tr>
             <tr><td>Agentic harnesses</td><td>Introduce the problems students will work on.</td></tr>
             <tr><td>Design thinking intro</td><td>Learn the process through a small in-class workshop.</td></tr>
-            <tr><td>Understanding problems</td><td>Teams interview stakeholders.</td></tr>
+            <tr><td>Understanding problems + domain modeling</td><td>Teams interview stakeholders, then map domain concepts and rules.</td></tr>
             <tr><td>Ideation techniques</td><td>Teams ideate in the problem space.</td></tr>
             <tr><td>Prototyping</td><td>Teams build prototypes.</td></tr>
             <tr><td>Validation</td><td>First studio: teams share work with stakeholders and class.</td></tr>
@@ -193,7 +193,7 @@
             <tr><td>Getting to production</td><td>Students build a real application and ship.</td></tr>
           </tbody>
         </table>
-        <aside class="notes">Read each row as a pairing: what is taught and how students apply it in the studio. Begin with a small website, introduce the project problems alongside agentic harnesses, and practice design thinking in a small in-class workshop. Teams then interview stakeholders, ideate, prototype, and share work in the first studio for validation. Feedback drives iteration before teams choose a final approach, gather quality attributes, select materials based on those attributes, and build and ship a real application. This is a sequence of learning, not a fixed weekly schedule.</aside>
+        <aside class="notes">Read each row as a pairing: what is taught and how students apply it in the studio. Begin with a small website, introduce the project problems alongside agentic harnesses, and practice design thinking in a small in-class workshop. Teams interview stakeholders and model the domain so they can translate users' expertise into concepts, relationships, and rules the application must represent. They then ideate, prototype, and share work in the first studio for validation. Feedback drives iteration before teams choose a final approach, gather quality attributes, select materials based on those attributes, and build and ship a real application. This is a sequence of learning, not a fixed weekly schedule.</aside>
       </section>
 
       <section id="first-build" data-title="Get Students Building with AI">
@@ -317,6 +317,31 @@
           </article>
         </div>
         <aside class="notes">Use a student-club event as an example: how does the organizer fill volunteer shifts today? Interviews reveal experiences, workflow maps reveal handoffs, and observation can expose unmentioned friction. Rose, Bud, Thorn and affinity mapping help teams organize what they learn. This slide explains course techniques; the shared studio comes later.</aside>
+      </section>
+
+      <section id="domain-modeling" data-title="Information Architecture and Data Modeling">
+        <div class="section-heading">
+          <p class="eyebrow">DESIGN THINKING</p><span class="margin-note">TURN DOMAIN EXPERTISE INTO APP CONCEPTS</span>
+        </div>
+        <h2>Model <em>the Domain</em></h2>
+        <div class="three-columns">
+          <article>
+            <h3>Name the concepts</h3>
+            <p>For club signups: members, events, shifts, and signups.</p>
+          </article>
+          <article>
+            <h3>Map relationships</h3>
+            <p>Members claim shifts; each shift belongs to an event.</p>
+          </article>
+          <article>
+            <h3>Make rules visible</h3>
+            <p>For example, a shift has a capacity that signups must respect.</p>
+          </article>
+        </div>
+        <div class="slide-note"><span>KEY IDEA BEING TAUGHT</span>
+          <p>Translate users' domain expertise into the information, relationships, and rules an application must represent.</p>
+        </div>
+        <aside class="notes">Information architecture and data modeling help students turn what stakeholders know about their work into a shared model for the application. Start with the users' words and workflows, then identify important concepts, how they relate, and the rules that must hold. For club signups, members claim shifts, shifts belong to events, and each shift has limited capacity. This model is not a database choice or a screen design; it helps teams decide what the application needs to represent before ideation and implementation.</aside>
       </section>
 
       <section id="ideation" data-title="Ideation">

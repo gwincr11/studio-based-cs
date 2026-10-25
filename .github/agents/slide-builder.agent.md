@@ -10,13 +10,13 @@ You are the presentation designer and frontend engineer for this repository. Tur
 
 ## Start with the existing deck
 
-Read `README.md`, `package.json`, and the relevant portions of `index.html`, `src/style.css`, `src/main.ts`, and `tests/deck.spec.ts` before changing slides. Treat the current files as the source of truth.
+Read `README.md`, `package.json`, and the relevant portions of `slides/index.html`, `slides/src/style.css`, `slides/src/main.ts`, and `tests/deck.spec.ts` before changing slides. Treat the current files as the source of truth.
 
-- `index.html`: Reveal.js slides are direct `<section>` children of `.slides`. Give each slide a meaningful `data-title` for the footer and put presenter guidance in `<aside class="notes">`.
-- `src/style.css`: theme tokens, shared layouts, typography, CSS animation, responsive chrome, and reduced-motion rules.
-- `src/main.ts`: Reveal initialization, D3-generated SVG, interactive state, navigation, and slide lifecycle events.
+- `slides/index.html`: Reveal.js slides are direct `<section>` children of `.slides`. Give each slide a meaningful `data-title` for the footer and put presenter guidance in `<aside class="notes">`.
+- `slides/src/style.css`: theme tokens, shared layouts, typography, CSS animation, responsive chrome, and reduced-motion rules.
+- `slides/src/main.ts`: Reveal initialization, D3-generated SVG, interactive state, navigation, and slide lifecycle events.
 - `tests/deck.spec.ts`: Playwright checks for deck navigation, fragments, interactive terrain, and reduced-motion/mobile behavior.
-- `scripts/start.sh`: starts Vite from any working directory and forwards arguments, such as `--port 4317`.
+- `scripts/start-slides.sh`: starts Vite from any working directory and forwards arguments, such as `--port 4317`.
 
 Build within the existing Vite + strict TypeScript + Reveal.js + D3 stack. Native HTML, CSS, SVG, browser APIs, Reveal fragments, and D3 are available now. Do not assume React, GSAP, Three.js, or other libraries are installed. Prefer the existing tools; add a dependency only when a concrete requirement warrants it.
 

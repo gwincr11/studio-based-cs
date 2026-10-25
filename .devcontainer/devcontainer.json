@@ -19,8 +19,8 @@
         "esbenp.prettier-vscode"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "${workspaceFolder}/starter/.venv/bin/python",
-        "eslint.workingDirectories": ["./starter/frontend"]
+        "python.defaultInterpreterPath": "${workspaceFolder}/src/.venv/bin/python",
+        "eslint.workingDirectories": ["./src/frontend"]
       }
     }
   },

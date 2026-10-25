@@ -2,7 +2,7 @@
   "servers": {
     "playwright": {
       "command": "node",
-      "args": ["${workspaceFolder}/starter/node_modules/@playwright/mcp/cli.js", "--headless"]
+      "args": ["${workspaceFolder}/src/node_modules/@playwright/mcp/cli.js", "--headless"]
     }
   }
 }

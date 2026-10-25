@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "dev": "vite slides --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build slides --outDir ../dist --emptyOutDir",
     "preview": "vite preview --host 127.0.0.1",
     "test": "playwright test"
   },

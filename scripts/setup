@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")/.."
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT_DIR/src"
 
-script/bootstrap
+"$ROOT_DIR/scripts/bootstrap"
 if [ ! -f .env ]; then
     cp .env.example .env
 fi
@@ -14,4 +15,4 @@ if [ -z "${DATABASE_URL:-}" ] && grep -qx 'DATABASE_URL=postgresql:///studio_app
 fi
 .venv/bin/flask --app src.app:create_app db upgrade
 npm --prefix frontend run build
-echo "Ready. Run script/server."
+echo "Ready. Run scripts/start-app from the repository root."

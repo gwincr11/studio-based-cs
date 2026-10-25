@@ -16,8 +16,7 @@ they are not unlimited free services.
 In the Codespaces terminal:
 
 ```sh
-cd starter
-script/server
+./scripts/start-app
 ```
 
 Open the port printed in the terminal (normally **5000**). If it is busy, the
@@ -32,16 +31,15 @@ Requires Python 3.12+, Node.js 22.12+, and a running PostgreSQL server with
 `psql` and `createdb` on your PATH.
 
 ```sh
-cd starter
-script/setup
-script/server
+./scripts/setup
+./scripts/start-app
 ```
 
 Setup creates `.venv/` and `.env`, installs the locked npm dependencies, creates
 the default local `studio_app` database if needed, applies migrations, and builds
 React assets. The server starts at port 5000 and automatically tries higher ports
 if it is occupied. Open the URL printed in the terminal. Use
-`PORT=5050 script/server` to start the search at a different port, or `PORT=0` to
+`PORT=5050 ./scripts/start-app` to start the search at a different port, or `PORT=0` to
 let the operating system choose an available port.
 
 For a different PostgreSQL server, copy `.env.example` to `.env` and set
@@ -50,12 +48,12 @@ database on that server first. Environment variables take precedence over `.env`
 No database password is required in the default Codespaces development setup.
 
 Frontend edits need a rebuild and browser refresh. In a second terminal, run
-`npm --prefix frontend run dev` from `starter/` to rebuild on changes.
-Restart `script/server` after Python changes. The Flask debugger is off.
+`npm --prefix src/frontend run dev` from the repository root to rebuild on changes.
+Restart `./scripts/start-app` after Python changes. The Flask debugger is off.
 
 ## Work with an agent
 
-From `starter/`, launch `copilot` and describe the other team's problem, chosen
+From `src/`, launch `copilot` and describe the other team's problem, chosen
 idea, and acceptance criteria. Copilot authentication and any required subscription
 are separate from installing the CLI. `AGENTS.md` describes the app and checks;
 the root `.github/agents/` retains planning, plan-review, and refactoring roles,
@@ -72,21 +70,21 @@ autonomous build loop, tutorial exercise, or prefilled implementation plan.
 
 ## Check your changes
 
-Run from `starter/`:
+Run from the repository root:
 
 ```sh
-script/lint
-script/typecheck
-script/test
-npm exec -- playwright install chromium  # first local browser check only
-script/test-e2e
+./scripts/lint
+./scripts/typecheck
+./scripts/test
+cd src && npm exec -- playwright install chromium  # first local browser check only
+cd .. && ./scripts/test-e2e
 ```
 
 Backend tests use in-memory SQLite. Browser tests use a temporary, migrated
 SQLite database and the real built React UI. The repository's starter CI also
 applies migrations and checks model/schema consistency against PostgreSQL 16.
 
-For model changes:
+For model changes, run these commands from `src/`:
 
 ```sh
 .venv/bin/flask --app src.app:create_app db migrate -m "describe the change"
@@ -96,11 +94,12 @@ For model changes:
 ```
 
 To install the repository's pre-commit hooks locally, run
-`starter/.venv/bin/pre-commit install` from the repository root.
+`src/.venv/bin/pre-commit install` from the repository root.
 
 ## Deploy on Render
 
-The root `render.yaml` deploys **only `starter/`**, not the slide deck.
+The root `render.yaml` deploys the Flask app and frontend from `src/`, with
+repository-level scripts for setup and launch.
 
 1. Push your team's fork to GitHub.
 2. Create an external PostgreSQL database and copy its connection URL. A provider
@@ -116,10 +115,10 @@ For manual Web Service setup, use these settings:
 
 | Setting | Value |
 | --- | --- |
-| Root directory | `starter` |
+| Root directory | Repository root |
 | Runtime / compute | Python / Free |
-| Build command | `pip install -r requirements.txt && npm --prefix frontend ci && npm --prefix frontend run build` |
-| Start command | `bash script/start` |
+| Build command | `pip install -r src/requirements.txt && npm --prefix src/frontend ci && npm --prefix src/frontend run build` |
+| Start command | `bash scripts/start` |
 | Health check | `/health` |
 | Environment | `APP_ENV=production`, `DATABASE_URL`, `FLASK_SECRET_KEY` |
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")/.."
+cd "$(dirname "${BASH_SOURCE[0]}")/../src"
 
 python -m flask --app src.app:create_app db upgrade
 exec gunicorn --chdir src 'app:create_app()' --bind "0.0.0.0:${PORT:-5000}" --access-logfile -

@@ -10,16 +10,16 @@ Sample feedback and the ADR example are illustrative. Workshop participants brin
 
 ## Bundled workshop app
 
-[`starter/`](starter/README.md) contains an independent Flask + React Islands +
+[`src/`](src/README.md) contains an independent Flask + React Islands +
 PostgreSQL starter, with a working message board to verify the full stack before
 teams build their own solution. It includes agent instructions, planning/review/
 refactoring agents, browser tools, lint/type/test scripts, pre-commit hooks, and
 GitHub Actions. The presentation's existing app and commands remain separate.
 
 Open this repository in Codespaces to install both projects and PostgreSQL using
-the root `.devcontainer/` setup, then run `cd starter && script/server` and open
+the root `.devcontainer/` setup, then run `./scripts/start-app` and open
 the URL printed in the terminal (port 5000, or the next available port). For local
-setup, run `cd starter && script/setup` first. The root
+setup, run `./scripts/setup` first. The root
 `render.yaml` deploys the starter as a free Render web service with an externally
 provided PostgreSQL URL. See the starter README for requirements, account limits,
 and deployment steps.
@@ -30,10 +30,10 @@ Requires Node.js 20.19+ or 22.12+.
 
 ```sh
 npm install
-./scripts/start.sh
+./scripts/start-slides.sh
 ```
 
-The launch script works from any working directory and forwards options to Vite, for example `./scripts/start.sh --port 4317`. Stop the server with **Ctrl+C**. You can also use `npm run dev` directly.
+The launch script works from any working directory and forwards options to Vite, for example `./scripts/start-slides.sh --port 4317`. Stop the server with **Ctrl+C**. You can also use `npm run dev` directly.
 
 Open the local URL printed by Vite. `npm run build` type-checks and creates the deployable `dist/` directory; `npm run preview` serves that build locally.
 
@@ -68,9 +68,9 @@ The course explanation finishes before the shared studio begins. The course arc 
 
 ## Make it yours
 
-- **`index.html`** contains the slide content and speaker notes. Add a `<section id="shareable-name" data-title="Your slide title">` inside `.slides`; the footer count updates automatically. Put speaker notes in `<aside class="notes">`.
-- **`src/style.css`** defines the theme and layouts. Reuse `.eyebrow`, `.section-heading`, `.section-intro`, and `.margin-note`. Slides use a 1440 × 810 design canvas, scaled to fit the viewport.
-- **`src/main.ts`** initializes Reveal.js and connects the material and curveball controls. Use Reveal's `slidechanged` event for slide-specific animation lifecycles; stop timers or simulations when their slide is left.
+- **`slides/index.html`** contains the slide content and speaker notes. Add a `<section id="shareable-name" data-title="Your slide title">` inside `.slides`; the footer count updates automatically. Put speaker notes in `<aside class="notes">`.
+- **`slides/src/style.css`** defines the theme and layouts. Reuse `.eyebrow`, `.section-heading`, `.section-intro`, and `.margin-note`. Slides use a 1440 × 810 design canvas, scaled to fit the viewport.
+- **`slides/src/main.ts`** initializes Reveal.js and connects the material and curveball controls. Use Reveal's `slidechanged` event for slide-specific animation lifecycles; stop timers or simulations when their slide is left.
 - Add `class="fragment"` to reveal an element on the next advance. Use `data-fragment-index` to control ordering.
 - Google Fonts supplies DM Sans and Libre Caslon Display; local system fallbacks keep the deck usable offline. Self-host the fonts if you need exact offline typography.
 

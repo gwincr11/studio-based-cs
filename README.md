@@ -1,5 +1,7 @@
 # Teaching Software Engineering in a Studio Class with AI
 
+## https://github.com/gwincr11/studio-based-cs
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/gwincr11/studio-based-cs)
 
 An outline-led, 38-slide presentation introducing a proposed class, followed by a distinct hands-on studio and guest discussions. Slide titles and order follow the presenter's course outline. The warm mineral palette, architectural typography, and geometric details remain a visual theme rather than a competing narrative.

@@ -2,6 +2,7 @@
 import errno
 import os
 import socket
+import webbrowser
 
 from flask import Flask
 from werkzeug.serving import BaseWSGIServer, make_server
@@ -31,6 +32,9 @@ def main() -> None:
     app = create_app()
     with create_server(app, int(os.environ.get("PORT", "5000"))) as server:
         app.logger.info("Development server: http://localhost:%s (Ctrl+C to stop)", server.port)
+        if os.environ.get("CODESPACES") == "true":
+            # In Codespaces, $BROWSER opens the forwarded port URL.
+            webbrowser.open(f"http://localhost:{server.port}")
         server.serve_forever()
 
 

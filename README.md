@@ -7,8 +7,9 @@
 
 - Wait for codespace to build
 - view -> Terminal
-- run scripts/start-app in the terminal
+- run `scripts/start-app` in the terminal
 - A website should open for you.
+- type `copilot` in the terminal
 
 ### Overview of contents
 
